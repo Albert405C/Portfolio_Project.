@@ -1,0 +1,968 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,500;1,700&display=swap');
+
+:root
+{
+    --bg-black-900:#bdbdd1;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#101011;
+    --text-black-700:#0c0c0e;
+
+}
+
+body
+{
+    margin:0;
+    padding:0;
+    line-height: 1.5s;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,::after
+{
+    box-sizing: border-box;
+}
+
+ul
+{
+    list-style: none;
+}
+
+.section
+{
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+
+
+
+.main-content
+{
+    padding-left: 270px;
+}
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container
+{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+   
+}
+.section .container
+{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.section .title
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+  
+
+}
+.section-title h2
+{
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+  
+}
+
+.section-title h2::before
+{
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.section-title h2::after
+{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.btn 
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 20px;
+    color: whitesmoke;
+    border-radius: 50px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-right: 15px;
+    
+
+}
+
+.btn:hover 
+{
+    transform: scale(1.05);
+}
+
+.btn .contact-form{
+    /* Add your button styles here */
+    cursor: not-allowed;
+    opacity: 0.5;
+    /* The button is initially disabled */
+}
+
+.btn.enabled .contact-form{
+    /* Style to apply when the button is enabled */
+    cursor: pointer;
+    opacity: 1;
+}
+
+.aside
+{
+    width: 260px;
+    background: var(--bg-black-900);
+    position: fixed;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid var(--bg-black-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    left: 0;
+    top:0;
+    z-index: 10;
+}
+
+.aside .logo
+{
+
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.aside .logo a
+{
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.aside .logo a span
+{
+    font-family: 'Clicker+Script' , cursive;
+    font-size: 40px;
+}
+
+.aside .logo a::after
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+
+}
+
+.aside .logo a::before
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+
+}
+.aside .nav-toggler
+{
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--skin-color);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside .nav-toggler span
+{
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+
+.aside .nav-toggler span::before
+{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.aside .nav-toggler span::after
+{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+
+.aside .nav
+{
+    margin-top: 50px;
+}
+
+.aside .nav li
+{
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aside .nav li a
+{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+
+.aside .nav li a i
+{
+    margin-right: 15px;
+}
+
+.aside .nav li a.active
+{
+    color: var(--skin-color);
+}
+
+.home
+{
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.home .home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+h3.hello
+{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+h3.hello span
+{
+    font-family: 'ClickerScript', cursive;
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+h3.my-profession
+{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.typing
+{
+    color: var(--skin-color);
+}
+
+.home-info p
+{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--text-black-700);
+}
+.home .home-img {
+    flex: 0 0 40%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    height: auto;
+    border-radius: 8px;
+}
+.home-img::after,
+.home-img::before {
+    content: '';
+    position: absolute;
+    width: 10%; /* Adjust the width as needed */
+}
+
+.home-img::after {
+    height: 10%; /* Adjust the height as needed */
+    border-bottom: 1.5% solid var(--skin-color); /* Adjust the border thickness as needed */
+    border-right: 1.5% solid var(--skin-color);
+    right: 2%; /* Adjust the right position as needed */
+    bottom: -1%; /* Adjust the bottom position as needed */
+}
+
+.home-img::before {
+    height: 10%; /* Adjust the height as needed */
+    border-top: 1.5% solid var(--skin-color); /* Adjust the border thickness as needed */
+    border-left: 1.5% solid var(--skin-color);
+    left: 2%; /* Adjust the left position as needed */
+    top: -1%; /* Adjust the top position as needed */
+}
+
+
+.home .home-img
+ {
+    transition: transform 0.5s ease;
+}
+
+
+.home .home-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+.about .about-content
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 60px;
+  
+}
+.about .about-content .about-text
+{
+    flex: 0 0 100% ;
+    max-width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about .about-content .about-text h3
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.about .about-content .about-text h3 span
+{
+    color: var(--skin-color);
+}
+
+.about .about-content .about-text p
+{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+
+.about .about-content .personal-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+
+}
+
+.about .about-content .skills
+{
+
+    flex: 0 0 40%;
+    max-width: 40%;
+   margin-top: 40px;
+
+
+}
+
+.about .about-content .personal-info .info-item
+{
+flex: 0 0 50%;
+max-width: 50%;
+}
+
+.about .about-content .personal-info .info-item p
+{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+}
+
+.about .about-content .personal-info .info-item p span
+{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.about .about-content .personal-info .buttons
+{
+    margin-top: 60px;
+
+
+}
+
+.about .about-content .personal-info .buttons .btn
+{
+    margin-top: 10px;
+    margin-right: 15px;
+    
+
+}
+.about .about-content .skills .skill-item
+{
+
+    flex: 0 0 100%;
+    max-width: 100%;
+   
+
+}
+
+.about .about-content .skills .skill-item h5
+{
+
+   line-height: 40px;
+   font-weight: 600;
+   font-size: 16px;
+   color: var(--text-black-900);
+   text-transform: capitalize;
+
+
+}
+
+.about .about-content .skills .skill-item .progress
+{
+
+    background-color: var(--bg-black-50);
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+
+}
+
+.about .about-content .skills .skill-item .progress .progress-in
+{
+
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   border-radius: 4px;
+   background-color: var(--skin-color);
+
+}
+
+.about .about-content .skills .skill-item .skill-percent
+{
+   position: absolute;
+   right: 0px;
+   color: var(--text-black-900);
+   top: -40px; 
+   font-weight: 400;
+   line-height: 40px;
+  
+}
+
+.about .about-content .education
+
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+
+}
+
+.about .about-content h3-title
+{
+    font-size: 24px;
+    margin-bottom: 100px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+
+.about .about-content .timeline-box
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .timeline-box
+{
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Add this CSS for the education timeline */
+.education {
+    padding: 50px 10;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-box {
+    position: relative;
+    padding: 10px;
+    background-color: var(--bg-black-900);
+    border: 2px solid var(--skin-color);
+    border-radius: 10px; /* Adjust the roundness as needed */
+    margin: 20px 0;
+}
+
+.timeline-content {
+    position: relative;
+}
+
+.timeline-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--skin-color);
+    border: 2px solid #fff;
+}
+
+.timeline-box:last-child::after {
+    content: none;
+}
+
+
+/* Add this CSS code to your existing stylesheet or create a new one */
+
+.services {
+    background: var(--bg-black-900);
+    padding: 60px 10px;
+    padding-top: 5px;
+    
+}
+
+.services .section-title {
+    margin-bottom: 30px;
+ 
+}
+
+.services .section-title h2::before,
+.services .section-title h2::after {
+    background-color: var(--skin-color);
+}
+
+.services .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.service-item {
+    flex: 0 0 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    margin: 15px;
+}
+
+.service-item h4{
+    font-size: 18px;
+}
+.service-item-inner {
+    background: var(--bg-black-900);
+    padding: 20px;
+    border: 4px solid var(--skin-color); /* Thicker border */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    height: 100%; /* Ensure all items have the same height */
+}
+
+.service-item:hover .service-item-inner {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 30px;
+    color: var(--skin-color);
+    margin-bottom: 20px;
+}
+
+.service-item h4 {
+    font-size: 24px;
+    color: var(--text-black-900);
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: var(--text-black-700);
+}
+
+/* Customize the icon colors if needed */
+.icon i.fas.fa-laptop-code { color: #007bff; } /* Laptop code icon color */
+.icon i.fas.fa-desktop { color: #28a745; } /* Desktop icon color */
+.icon i.fas.fa-server { color: #dc3545; } /* Server icon color */
+
+
+/* Add/modify this CSS code in your style.css file or in a <style> tag in your HTML file */
+
+.portfolio .section-title
+{
+    padding-top: 0px;
+}
+
+
+.portfolio-heading {
+    margin-bottom: 30px;
+    padding-top: 30px; /* Increase the margin to move it down */
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+    flex: 0 0 calc(33.333% - 20px); /* Create a 3-column layout with 20px margin */
+    max-width: calc(33.333% - 20px);
+}
+
+.portfolio-item-inner {
+    background-color: var(--bg-black-50);
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-item-inner:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.portfolio-details p {
+    margin-bottom: 15px;
+}
+
+
+/* Add this CSS code to your style.css file or in a <style> tag in your HTML file */
+
+.contact {
+    margin-top: 0px;
+    text-align: center; /* Center align the content */
+}
+
+.contact-title h2 {
+    border-bottom: 2px solid  var(--skin-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    color: var(--text-black-900); /* Use skin color for the title */
+}
+
+.contact-sub-title h2 {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-info-item i {
+    margin-right: 10px;
+    color: var(--skin-color); /* Use skin color for the icons */
+}
+
+.contact-info-item.left {
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.contact-info-item.right {
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space items evenly */
+    text-align: left; /* Align the form elements to the left */
+}
+
+.form-group {
+    flex: 0 0 calc(48% - 10px); /* Create a 2-column layout with 10px margin */
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--skin-color);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:1199px)
+{
+    .aside
+    {
+        left: -270px;
+    }
+
+    .main-content
+    {
+        padding-left: 0;
+    }
+
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+
+
+
+}
+
+@media (max-width:991px)
+{
+   .contact .contact-info-item,
+   .portfolio .portfolio-item,
+   .service .service-item,
+   .service .service-item-inner
+   {
+    flex: 0 0 50%;
+    max-width:50%
+   }
+
+
+
+
+   .home .home-info{
+        flex: 0 0 100;
+        max-width: 100%;
+    }
+   
+    @media (max-width: 991px) {
+        .home .home-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin: auto;
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+        }
+    }
+    
+
+}
+
+@media (max-width:767px)
+{
+.portfolio .portfolio-item,
+.contact .contact-form,
+.contact .contact-info-item,
+.service .service-item,
+.about .about-content .education, 
+.about .about-content .skills,
+.about .about-content .personal-info
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}
+
+/* Adjust the font size for h4 on services for smaller screens */
+@media (max-width: 767px) {
+    .service-item h4 {
+        font-size: 16px;
+    }
+}
+
+/* Make the service section responsive */
+@media (max-width: 767px) {
+    .services .row {
+        flex-direction: column; /* Stack service items vertically on smaller screens */
+        align-items: center; /* Center-align items on smaller screens */
+    }
+
+    .service-item {
+        flex: 0 0 100%; /* Full width for service items on smaller screens */
+        max-width: 100%;
+    }
+
+    .service-item-inner {
+        height: auto; /* Allow the height to adjust based on content */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .home-img::after,
+    .home-img::before {
+        width: 15%; /* Adjust the width for smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Add your responsive styles here */
+    .main-container {
+        display: block;
+    }
+
+    /* Adjust other styles as needed */
+}
+
+/* Responsive styles for navigation and logo */
+@media (max-width: 991px) {
+    .aside {
+        left: -270px; /* Hide the sidebar on smaller screens */
+    }
+
+    .main-content {
+        padding-left: 0;
+    }
+
+    .aside .nav-toggler {
+        display: flex; /* Show the navigation toggle button */
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 11; /* Ensure it's above other elements */
+    }
+
+    .aside .nav {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--bg-black-900);
+        z-index: 10;
+    }
+
+    .aside .nav.active {
+        display: flex; /* Show the navigation links when active */
+    }
+
+    .aside .nav li {
+        margin-bottom: 10px;
+    }
+
+    .aside .logo {
+        position: relative;
+        top: 20px;
+        left: 0;
+        margin: 20px 0;
+    }
+
+    .main-content {
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
