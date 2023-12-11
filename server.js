@@ -40,10 +40,10 @@ app.post('/send-email', async (req, res) => {
       console.log('Email sent:', info.response);
     });
     
-    // Send email
+    
     await transporter.sendMail(mailOptions);
 
-    // Send response to the client
+    
     res.send('Email sent successfully!');
   } catch (error) {
     console.error(error);
@@ -62,7 +62,7 @@ const config = {
       host: 'imap.gmail.com',
       port: 993,
       tls: {
-        ca: [fs.readFileSync('path/to/ca-certificate-bundle.pem')], // Provide the CA certificate bundle
+        ca: [fs.readFileSync('path/to/ca-certificate-bundle.pem')],
       },
       authTimeout: 3000,
     },
