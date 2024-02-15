@@ -25,7 +25,7 @@ app.post('/send-email', async (req, res) => {
         pass: 'Qwerty2005#*!',
       },
     });
-    
+
     const mailOptions = {
       from: 'mittoshukrani@gmail.com',
       to: 'chrismitto9@gmail.com',
@@ -43,6 +43,7 @@ app.post('/send-email', async (req, res) => {
     
     await transporter.sendMail(mailOptions);
 
+    
     
     res.send('Email sent successfully!');
   } catch (error) {
